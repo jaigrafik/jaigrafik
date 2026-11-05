@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaigrafik | Diseño gráfico para e-commerce, ads y web</title>
+<meta name="description" content="Diseño gráfico freelance para tiendas online, anuncios, páginas de producto y sitios web. Diseño que hace que tu marca se vea y venda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--white:#fff;--g1:#f2f2f2;--g2:#d9d9d9;--g3:#8a8a8a;--g4:#2a2a2a;--r:14px;
+--f:'Bricolage Grotesque','Helvetica Neue',Arial,system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--black);color:var(--white);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--g3);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:110px 0}
+h1,h2,h3{line-height:1.05;letter-spacing:-.03em;font-weight:800}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:16ch}
+.lead{color:var(--g3);max-width:52ch;margin-top:18px}
+.light{background:var(--white);color:var(--black)}
+.light .lead{color:#555}
+
+/* botones */
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font:600 1rem var(--f);text-decoration:none;border:2px solid var(--white);background:var(--white);color:var(--black);cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--white)}
+.btn.ghost:hover{background:var(--white);color:var(--black)}
+.light .btn{background:var(--black);color:var(--white);border-color:var(--black)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--g4)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:-.04em;text-decoration:none}
+.links{display:flex;gap:28px;align-items:center;font-size:.95rem}
+.links a{text-decoration:none;color:var(--g2)}
+.links a:hover{color:var(--white)}
+.links .btn{padding:10px 20px;color:var(--black)}
+
+/* hero */
+.hero{padding:90px 0 110px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem)}
+.hero p{color:var(--g2);font-size:1.2rem;max-width:44ch;margin:26px 0 36px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-in{opacity:0;transform:translateY(26px);animation:in .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-in:nth-child(2){animation-delay:.12s}.hero-in:nth-child(3){animation-delay:.24s}
+@keyframes in{to{opacity:1;transform:none}}
+
+/* showreel */
+.reel{position:relative;aspect-ratio:5/4.4;border-radius:22px;overflow:hidden;border:1px solid var(--g4);background:var(--black);isolation:isolate}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;z-index:1}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;overflow:hidden}
+.slide.on{opacity:1}
+.bars{position:absolute;z-index:3;top:14px;left:18px;right:18px;display:flex;gap:6px;mix-blend-mode:difference}
+.bars button{flex:1;height:16px;background:none;border:0;cursor:pointer;position:relative;padding:0}
+.bars button::before,.bars i{content:"";position:absolute;left:0;top:6px;height:3px;border-radius:3px}
+.bars button::before{right:0;background:rgba(255,255,255,.35)}
+.bars i{width:0;background:#fff}
+.bars .done i{width:100%}
+.bars .run i{animation:fill 3.6s linear forwards}
+@keyframes fill{to{width:100%}}
+.cap{position:absolute;z-index:3;left:20px;bottom:18px;font-weight:600;font-size:.95rem;color:#fff;mix-blend-mode:difference}
+.s1{background:var(--white);color:var(--black)}
+.s1 .c1{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;background:var(--black);right:-14%;top:-20%}
+.s1 .c2{position:absolute;width:30%;aspect-ratio:1;border-radius:50%;border:3px solid var(--black);right:12%;bottom:-6%}
+.s1 b{position:absolute;left:8%;top:18%;font-size:clamp(4.5rem,11vw,8rem);line-height:.85;letter-spacing:-.06em}
+.s1 small{display:block;font-size:1.1rem;letter-spacing:0;font-weight:600;margin-top:14px}
+.s1 em{position:absolute;left:8%;bottom:14%;font-style:normal;font-weight:700;background:var(--black);color:var(--white);padding:10px 22px;border-radius:99px}
+.s2{background:var(--black)}
+.s2 .ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:2px solid var(--white);border-radius:50%;aspect-ratio:1}
+.s2 .r1{width:62%}.s2 .r2{width:92%;opacity:.35}
+.bottle{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:23%;aspect-ratio:1/2.2;background:var(--white);border-radius:30px 30px 16px 16px}
+.bottle::before{content:"";position:absolute;left:30%;right:30%;top:-9%;height:10%;background:var(--white);border-radius:6px 6px 0 0}
+.bottle::after{content:"";position:absolute;left:0;right:0;top:42%;height:28%;background:var(--black)}
+.s2 .nw{position:absolute;left:8%;top:16%;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.s2 .tag{position:absolute;right:8%;bottom:14%;background:var(--white);color:var(--black);font-weight:800;padding:8px 18px;border-radius:99px;font-size:1.2rem}
+.s3{background:var(--g1);color:var(--black)}
+.win{position:absolute;left:9%;right:9%;top:16%;bottom:12%;border:2px solid var(--black);border-radius:12px;background:var(--white);overflow:hidden}
+.win .hd{height:28px;border-bottom:2px solid var(--black);display:flex;gap:6px;align-items:center;padding:0 12px}
+.win .hd i{width:8px;height:8px;border-radius:50%;background:var(--black)}
+.win .bd{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;padding:18px;height:calc(100% - 28px)}
+.win .t{height:16px;background:var(--black);border-radius:4px;margin-bottom:10px;width:90%}
+.win .t.s{height:8px;background:var(--g2);width:100%}
+.win .bt{width:90px;height:26px;border-radius:99px;background:var(--black);margin-top:16px}
+.win .im{background:var(--black);border-radius:10px;position:relative}
+.win .im::after{content:"";position:absolute;inset:26%;border-radius:50%;background:var(--white)}
+.s4{background:var(--black);display:grid;place-items:center}
+.g{width:78%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.g div{aspect-ratio:1;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:2rem;letter-spacing:-.05em}
+.g .a{background:var(--white);color:var(--black)}.g .b{border:2px solid var(--white)}
+.g .c{background:repeating-linear-gradient(45deg,var(--white) 0 5px,var(--black) 5px 10px)}
+.g .d{background:var(--white);border-radius:50%}.g .e{background:var(--g4)}.g .f{background:var(--white);border-radius:12px 50% 12px 50%}
+.s5{background:var(--white);color:var(--black);display:grid;place-items:center;text-align:center}
+.s5 b{font-size:clamp(2.6rem,7.5vw,5.2rem);letter-spacing:-.06em;font-weight:800;line-height:1}
+.s5 b::after{content:"";display:inline-block;width:.26em;height:.26em;background:var(--black);border-radius:50%;margin-left:.04em}
+.s5 p{color:#555;font-size:1rem;margin-top:8px}
+.logo::after{content:"";display:inline-block;width:.3em;height:.3em;border-radius:50%;background:var(--white);margin-left:3px}
+
+/* beneficios */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.card{border:2px solid var(--black);border-radius:var(--r);padding:32px 28px}
+.card .ico{width:54px;height:54px;border-radius:50%;background:var(--black);display:grid;place-items:center;margin-bottom:24px}
+.card svg{width:26px;height:26px;stroke:var(--white);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.45rem;margin-bottom:10px}
+.card p{color:#444;margin-bottom:16px}
+.card ul{list-style:none;border-top:1px solid var(--g2);padding-top:14px;font-size:.95rem;color:#555}
+.card li{padding:3px 0}
+
+/* sobre mí */
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.photo{aspect-ratio:4/5;border-radius:var(--r);background:var(--white);color:var(--black);display:grid;place-items:center;font-size:9rem;font-weight:800;letter-spacing:-.06em;position:relative}
+.photo small{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:.8rem;font-weight:500;letter-spacing:0;color:var(--g3)}
+.about p{color:var(--g2);margin-top:18px;max-width:54ch}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tools span{border:1px solid var(--g3);border-radius:99px;padding:6px 16px;font-size:.9rem;color:var(--g2)}
+
+/* testimonios */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+blockquote{background:var(--g1);border-radius:var(--r);padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:26px}
+blockquote p{font-size:1.1rem;line-height:1.5;letter-spacing:-.01em}
+.who{display:flex;gap:12px;align-items:center;font-size:.92rem}
+.who i{width:42px;height:42px;border-radius:50%;background:var(--black);color:var(--white);display:grid;place-items:center;font-style:normal;font-weight:700}
+.who span{display:block;color:#666;font-size:.85rem}
+
+/* contacto */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+form{display:grid;gap:18px}
+label{display:grid;gap:8px;font-weight:500;font-size:.95rem}
+input,select,textarea{font:inherit;background:var(--black);color:var(--white);border:2px solid var(--g4);border-radius:10px;padding:14px 16px;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--white);outline:none}
+textarea{min-height:130px;resize:vertical}
+.err{color:var(--white);font-size:.85rem;display:none;background:var(--g4);padding:6px 10px;border-radius:6px}
+.invalid .err{display:block}.invalid input,.invalid textarea{border-color:var(--white)}
+#ok{display:none;border:2px solid var(--white);border-radius:var(--r);padding:20px;font-weight:600}
+
+/* footer */
+footer{border-top:1px solid var(--g4);padding:44px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;color:var(--g3);font-size:.9rem}
+.social{display:flex;gap:12px}
+.social a{width:44px;height:44px;border:1px solid var(--g4);border-radius:50%;display:grid;place-items:center;transition:background .2s}
+.social a:hover{background:var(--white)}
+.social a:hover svg{stroke:var(--black)}
+.social svg{width:20px;height:20px;stroke:var(--white);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:860px){
+section{padding:80px 0}
+.hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr;gap:44px}
+.cols,.quotes{grid-template-columns:1fr}
+.links a:not(.btn){display:none}
+.reel{aspect-ratio:1/1}
+.photo{max-width:320px;font-size:7rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-in{animation:none;opacity:1;transform:none}.mock{transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Jaigrafik</a>
+    <div class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#testimonios">Testimonios</a>
+      <a class="btn" href="#contacto">Hablemos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1 class="hero-in">Diseño que hace que tu marca se vea y venda.</h1>
+      <p class="hero-in">Soy Jaigrafik, diseñador gráfico freelance. Creo piezas para tiendas online, anuncios, páginas de producto y sitios web que enamoran a tus clientes y los llevan a comprar.</p>
+      <div class="cta-row hero-in">
+        <a class="btn" href="#contacto">Quiero mi diseño</a>
+        <a class="btn ghost" href="#servicios">Ver qué puedo hacer</a>
+      </div>
+    </div>
+    <div class="reel" id="reel" role="img" aria-label="Muestra de diseños: anuncios, e-commerce, web, redes sociales e identidad visual">
+      <video id="reelvid" muted loop playsinline></video>
+      <div class="bars" id="bars"></div>
+      <div class="slide s1" data-name="Anuncios"><div class="c1"></div><div class="c2"></div><b>50%<small>de descuento</small></b><em>Compra hoy</em></div>
+      <div class="slide s2" data-name="E-commerce"><div class="ring r1"></div><div class="ring r2"></div><div class="nw">Nuevo<br>sérum</div><div class="bottle"></div><div class="tag">$29</div></div>
+      <div class="slide s3" data-name="Diseño web"><div class="win"><div class="hd"><i></i><i></i><i></i></div><div class="bd"><div><div class="t"></div><div class="t"></div><div class="t s"></div><div class="t s"></div><div class="bt"></div></div><div class="im"></div></div></div></div>
+      <div class="slide s4" data-name="Redes sociales"><div class="g"><div class="a">Aa</div><div class="b">+</div><div class="c"></div><div class="d"></div><div class="e"></div><div class="f"></div></div></div>
+      <div class="slide s5" data-name="Identidad visual"><div><b>Jaigrafik</b><p>Tu marca, bien diseñada</p></div></div>
+      <div class="cap" id="cap"></div>
+    </div>
+  </div>
+</header>
+
+<section class="light" id="servicios">
+  <div class="wrap">
+    <h2>Lo que puedo hacer por tu negocio</h2>
+    <p class="lead">Cada diseño tiene un trabajo claro: que tu marca se vea profesional y que quien llegue entienda rápido qué ofreces y por qué comprarte.</p>
+    <div class="cols">
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9v11h18V9"/><path d="M3 9c0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0 0 2 3 2 3 0"/></svg></div>
+        <h3>E-commerce</h3>
+        <p>Una tienda online con imagen coherente genera confianza desde el primer vistazo.</p>
+        <ul><li>Banners y portadas de colección</li><li>Imágenes de producto y catálogos</li><li>Identidad visual para tu tienda</li></ul>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11v3a1 1 0 001 1h3l8 5V5L7 10H4a1 1 0 00-1 1z"/><path d="M19 9a4 4 0 010 6"/></svg></div>
+        <h3>Ads que llaman la atención</h3>
+        <p>Anuncios pensados para frenar el scroll y mover a la persona a hacer clic.</p>
+        <ul><li>Creativos para Meta, TikTok y Google</li><li>Stories, reels y carruseles</li><li>Variantes para probar qué funciona</li></ul>
+      </article>
+      <article class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M9 9v11"/></svg></div>
+        <h3>Product page y web</h3>
+        <p>Páginas claras y bonitas que explican tu producto y facilitan la compra.</p>
+        <ul><li>Diseño de páginas de producto</li><li>Landing pages y sitios web</li><li>Diseño listo para desarrollar</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre-mi">
+  <div class="wrap">
+    <div class="photo" role="img" aria-label="Espacio para tu foto">J<small>Reemplaza por tu foto</small></div>
+    <div>
+      <h2>Hola, soy Jaigrafik</h2>
+      <p>Me dedico al diseño gráfico para negocios que venden en internet. Trabajo contigo de forma directa: me cuentas qué necesitas, te propongo ideas claras y ajustamos hasta que estés feliz con el resultado.</p>
+      <p>Mi enfoque es simple: diseño bonito que además cumple un objetivo, ya sea vender más, explicar mejor o hacer que tu marca se recuerde.</p>
+      <div class="tools"><span>Photoshop</span><span>Illustrator</span><span>Figma</span><span>Canva Pro</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="testimonios">
+  <div class="wrap">
+    <h2>Lo que dicen mis clientes</h2>
+    <div class="quotes">
+      <blockquote><p>Rediseñó las fichas de producto de mi tienda y las consultas aumentaron casi de inmediato. Entendió justo lo que necesitaba.</p><div class="who"><i>M</i><div>María G.<span>Tienda de accesorios</span></div></div></blockquote>
+      <blockquote><p>Entrega rápida, comunicación clara y anuncios que sí se ven profesionales. Ya tengo claro con quién voy a seguir trabajando.</p><div class="who"><i>C</i><div>Carlos R.<span>Marca de ropa</span></div></div></blockquote>
+      <blockquote><p>Me ayudó a ordenar la imagen de mi negocio y a crear una web que por fin refleja lo que hago. Muy cercano y atento.</p><div class="who"><i>L</i><div>Laura P.<span>Emprendedora</span></div></div></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>Cuéntame sobre tu proyecto</h2>
+      <p class="lead">Escríbeme qué necesitas y te respondo en menos de 24 horas con ideas y una propuesta clara.</p>
+    </div>
+    <form id="form" novalidate>
+      <label id="f-nombre">Nombre<input name="nombre" type="text" autocomplete="name" required><span class="err">Escribe tu nombre.</span></label>
+      <label id="f-email">Correo electrónico<input name="email" type="email" autocomplete="email" required><span class="err">Escribe un correo válido.</span></label>
+      <label>¿Qué necesitas?
+        <select name="servicio">
+          <option>Diseño para e-commerce</option>
+          <option>Anuncios (ads)</option>
+          <option>Página de producto</option>
+          <option>Diseño web</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <label id="f-msg">Mensaje<textarea name="mensaje" required></textarea><span class="err">Cuéntame un poco sobre tu proyecto.</span></label>
+      <button class="btn" type="submit">Enviar mensaje</button>
+      <div id="ok" role="status">Gracias. Se abrió tu correo con el mensaje listo; solo falta pulsar enviar.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Jaigrafik. Todos los derechos reservados.</span>
+    <div class="social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a>
+      <a href="#" aria-label="Behance"><svg viewBox="0 0 24 24"><path d="M3 6h6a3 3 0 010 6H3zM3 12h7a3 3 0 010 6H3z"/><path d="M14 8h7M14 14a3.5 3.5 0 007 0 3.5 3.5 0 00-7 0h7"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 016 0v4"/></svg></a>
+      <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.2-4A8 8 0 1112 20a8 8 0 01-3.8-1z"/><path d="M9 8c0 4 3 7 7 7l1-2-2.5-1-1 1c-1.5-.5-2.5-1.5-3-3l1-1-1-2.5z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// año del footer
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// showreel del hero
+// Para usar tu propio video: súbelo junto a este archivo y escribe su nombre, por ejemplo 'reel.mp4'
+var REEL_VIDEO = '';
+(function(){
+  var reel = document.getElementById('reel'), vid = document.getElementById('reelvid'),
+      slides = [].slice.call(reel.querySelectorAll('.slide')), barsBox = document.getElementById('bars'),
+      cap = document.getElementById('cap');
+  if (REEL_VIDEO) {
+    vid.src = REEL_VIDEO; vid.style.display = 'block'; vid.autoplay = true;
+    vid.play().catch(function(){});
+    slides.forEach(function(s){ s.remove(); }); barsBox.remove(); cap.remove();
+    return;
+  }
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, i = 0, t, bars = [];
+  slides.forEach(function(s, k){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', 'Ver ' + s.dataset.name);
+    b.appendChild(document.createElement('i'));
+    b.onclick = function(){ show(k); };
+    barsBox.appendChild(b); bars.push(b);
+  });
+  function show(n){
+    i = n; clearTimeout(t);
+    slides.forEach(function(s, k){ s.classList.toggle('on', k === n); });
+    bars.forEach(function(b, k){ b.className = k < n ? 'done' : (k === n ? (reduce ? 'done' : 'run') : ''); });
+    cap.textContent = slides[n].dataset.name;
+    if (!reduce) t = setTimeout(function(){ show((n + 1) % slides.length); }, 3600);
+  }
+  show(0);
+})();
+
+// formulario: valida y abre el correo con el mensaje listo
+// CAMBIA ESTE CORREO por el tuyo:
+var EMAIL = 'hola@jaigrafik.com';
+document.getElementById('form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, ok = true;
+  function check(id, valid){
+    var el = document.getElementById(id);
+    el.classList.toggle('invalid', !valid);
+    if (!valid) ok = false;
+  }
+  check('f-nombre', f.nombre.value.trim().length > 1);
+  check('f-email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim()));
+  check('f-msg', f.mensaje.value.trim().length > 5);
+  if (!ok) return;
+  var asunto = 'Proyecto: ' + f.servicio.value;
+  var cuerpo = 'Hola, soy ' + f.nombre.value.trim() + ' (' + f.email.value.trim() + ').\n\n' + f.mensaje.value.trim();
+  location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+  document.getElementById('ok').style.display = 'block';
+  f.reset();
+});
+</script>
+</body>
+</html>
